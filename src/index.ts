@@ -44,7 +44,7 @@ gameTabBtn.addEventListener("click", () => onTabClick(Tab.Game));
 function appendNewsEntry(article: Article) {
     const entry = document.createElement("a");
     entry.role = "button";
-    entry.href = "/details/?id=" + article.announce_id;
+    entry.href = import.meta.env.BASE_URL + "details/?id=" + article.announce_id;
     entry.className = "news-entry";
     entry.addEventListener("click", () => {
         Unity.call("snd_sfx_UI_Tap_01");
