@@ -1,0 +1,35 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=no" />
+    <link rel="stylesheet" href="/src/style.css" />
+    <title>PakaNews</title>
+  </head>
+  <body>
+    <div class="container">
+      <div class="root">
+        <div class="navbar">
+          <div class="inner">
+            <a id="allTabBtn" role="button" class="nav-btn">
+              <div class="inner">All</div>
+            </a>
+            <a id="gameTabBtn" role="button" class="nav-btn">
+              <div class="inner">Game</div>
+            </a>
+          </div>
+        </div>
+        <div class="contents">
+          <div id="newsEntries" class="inner"></div>
+          <div id="loader">
+            <img width="64" height="64" src="/assets/loading.svg">
+          </div>
+        </div>
+        <div class="footer">
+          News provided by umapyoi.net
+        </div>
+      </div>
+    </div>
+    <script type="module" src="/src/index.ts"></script>
+  </body>
+</html>

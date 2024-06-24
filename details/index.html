@@ -1,0 +1,32 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=no" />
+    <link rel="stylesheet" href="/src/style.css" />
+    <title>PakaNews</title>
+  </head>
+  <body>
+    <div class="container">
+      <div class="root">
+        <div class="contents details-page">
+          <div id="contentsInner" class="inner">
+            <div class="news-label-box">
+              <div id="label" class="label" style="background-color: #B5D913;">N/A</div>
+              <div id="postTime" class="post-time"></div>
+            </div>
+            <h1 id="title" class="news-title details-page">N/A</h1>
+            <div id="message"></div>
+          </div>
+          <div id="loader">
+            <img width="64" height="64" src="/assets/loading.svg">
+          </div>
+        </div>
+        <div class="footer">
+          News provided by umapyoi.net
+        </div>
+      </div>
+    </div>
+    <script type="module" src="/src/details.ts"></script>
+  </body>
+</html>
