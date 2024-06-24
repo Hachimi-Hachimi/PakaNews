@@ -37,7 +37,7 @@ async function init() {
     postTime.innerText = Utils.formatTimestamp(article.post_at);
     title.innerText = article.title_english;
     let messageHTML = article.message_english;
-    if (article.image) {
+    if (article.image && !messageHTML.startsWith("<figure><img")) {
         messageHTML = `<figure><img src="${article.image}"></figure>${messageHTML}`;
     }
     message.innerHTML = DOMPurify.sanitize(messageHTML);

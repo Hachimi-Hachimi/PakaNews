@@ -1,5 +1,12 @@
+@font-face {
+    font-family: "dynamic_01";
+    src: local("Dynamic01.otf");
+}
+
 html {
     height: 100%;
+    -webkit-text-size-adjust: auto;
+    text-size-adjust: auto;
 }
 
 body {
