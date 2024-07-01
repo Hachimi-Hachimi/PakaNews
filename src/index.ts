@@ -141,6 +141,7 @@ async function loadNews(loadMore = false) {
         updateState({
             scrollTop: newsEntries.scrollTop,
             tab: currentTab,
+            offset,
             data: [...(state && loadMore ? state.data : []), ...data]
         });
 
@@ -157,6 +158,7 @@ async function loadNews(loadMore = false) {
 interface State {
     scrollTop: number,
     tab: Tab,
+    offset: number,
     data: Article[]
 }
 
@@ -175,6 +177,8 @@ function restoreState() {
     newsEntries.scrollTo(0, state.scrollTop);
     newsEntries.classList.add("show");
 
+    offset = state.offset;
+
     currentTab = state.tab;
     updateTabBtns();
 
@@ -192,6 +196,7 @@ function init() {
         updateState({
             scrollTop: newsEntries.scrollTop,
             tab: currentTab,
+            offset,
             data: state?.data ?? []
         });
     });
