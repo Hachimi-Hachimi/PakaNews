@@ -46,10 +46,15 @@ async function init() {
         if (node.tagName == "A") {
             const anchor = node as HTMLAnchorElement;
             const href = anchor.href;
-            anchor.href = "javascript:void(0)";
-            anchor.addEventListener("click", () => {
-                Unity.call("externalbrowser_" + href)
-            });
+            if (navigator.userAgent.includes("; wv)") || navigator.userAgent.includes("WebView")) {
+                anchor.href = "javascript:void(0)";
+                anchor.addEventListener("click", () => {
+                    Unity.call("externalbrowser_" + href)
+                });
+            }
+            else {
+                anchor.target = "_blank";
+            }
         }
     }
 }
