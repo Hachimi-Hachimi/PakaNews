@@ -5,8 +5,8 @@
 
 @font-face {
     font-family: "Open Sans Rodin";
-    src: url("/assets/OpenSans-Rodin.woff2") format("woff2"),
-         url("/assets/OpenSans-Rodin.ttf") format("truetype");
+    src: url("/assets/OpenSansRodin-ExtraBold.woff2") format("woff2"),
+         url("/assets/OpenSansRodin-ExtraBold.ttf") format("truetype");
     font-weight: 800;
 }
 
