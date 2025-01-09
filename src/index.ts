@@ -191,7 +191,7 @@ function init() {
         updateTabBtns();
     }
 
-    newsEntries.addEventListener("scroll", () => {
+    window.addEventListener("beforeunload", () => {
         let state: State | null = history.state;
         updateState({
             scrollTop: newsEntries.scrollTop,

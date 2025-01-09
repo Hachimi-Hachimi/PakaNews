@@ -218,6 +218,7 @@ body {
 .news-entry > img {
     margin-bottom: 10px;
     border-radius: 6px;
+    aspect-ratio: 936/228;
 }
 
 .details-page figure {
